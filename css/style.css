@@ -1,0 +1,19 @@
+:root{
+    ---white: hsl(0, 0%, 98%);
+    ---gray: hsl(0, 0%, 41%)
+    ---black: hsl(0, 0%, 8%)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    ;
+}
+
+a,p,h1,h2,h3,h4{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
