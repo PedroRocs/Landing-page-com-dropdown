@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
+
 <body>
 
+  <header id="header">
+    <div id="logo">
+      <h1>snap</h1>
+    </div>
+    <nav id="navbar">
+      <div id="nav-hamburger">
+
+      </div>
+      <ul id="content">
+        <li class="item-list">
+          Features
+          <ul class="dropdown">
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+          </ul>
+        </li>
+        <li class="item-list">
+          <ul class="dropdown">
+            Company
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+            <li class="item-list-dropdown"></li>
+          </ul>
+        </li>
+        <li class="item-list">Carrers</li>
+        <li class="item-list">About</li>
+      </ul>
+    </nav>
+
+    <div id="buttons">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+  </header>
+  
   <script src="js/script.js"></script>
 </body>
+
 </html>
