@@ -1,10 +1,10 @@
-:root{
+:root {
     --white: rgb(250, 250, 250);
     --gray: rgb(105, 105, 105);
     --black: rgb(20, 20, 20);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,64 +14,74 @@
     outline: none;
 }
 
-@keyframes animation {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-a,p,h1,h2,h3,h4{
+a,
+p,
+h1,
+h2,
+h3,
+h4 {
     text-decoration: none;
     color: var(--gray);
     font-size: 18px;
 }
 
-li{
+li {
     list-style: none;
     text-decoration: none;
 }
 
+button{
+    cursor: pointer;
+}
+/* animações  */
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* CABEÇALHO  */
 
-#header{
+#header {
     max-width: 1440px;
     width: 100%;
     display: flex;
     padding: 15px 30px;
     align-items: center;
-    
+
 }
 
-#logo h1{
+#logo h1 {
     font-size: 2em;
     color: var(--black);
 }
 
-#nav-hamburguer{
+#nav-hamburguer {
     display: none;
 }
 
-#navbar{
+#navbar {
     display: flex;
     justify-content: space-between;
     margin-left: 60px;
     flex-grow: 1;
 }
 
-#close{
+#close {
     display: none;
 }
 
-#content-list{
+#content-list {
     display: flex;
     column-gap: 60px;
 }
 
-.item-list{
+.item-list {
     font-size: 1em;
     font-weight: 500;
     color: var(--gray);
@@ -79,6 +89,7 @@ li{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .item-list:hover a {
@@ -91,13 +102,13 @@ li{
     transition: 0.3s;
 }
 
-.item-list a svg{
+.item-list a svg {
     margin-left: 10px;
     transition: 0.3s;
-    stroke:#686868;
+    stroke: #686868;
 }
 
-.dropdown{
+.dropdown {
     width: max-content;
     padding: 20px;
     position: absolute;
@@ -105,43 +116,41 @@ li{
     background-color: var(--white);
     top: 3rem;
     right: 0;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0,0.1);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    
 }
 
-.dropdown.active{
+.dropdown.active {
     display: block;
     animation: 0.5s animation;
 }
 
-.item-list-dropdown{
+.item-list-dropdown {
     padding: 10px;
     display: flex;
 }
 
-.item-list-dropdown svg{
+.item-list-dropdown svg {
     margin-right: 10px;
 }
 
-#buttons{
+#buttons {
     display: flex;
     column-gap: 30px;
 }
 
-#buttons button{
+#buttons button {
     color: var(--gray);
-    cursor: pointer;
 }
 
-#buttons button:last-child{
+#buttons button:last-child {
     padding: 10px 20px;
     border-radius: 10px;
     font-family: 200;
     border: 1px solid var(--gray);
 }
 
-#buttons button:hover{
+#buttons button:hover {
     border-color: var(--black);
     color: var(--black);
     transition: 0.3s;
@@ -149,30 +158,31 @@ li{
 
 @media screen and (max-width:950px) {
 
-    #header{
+    #header {
         justify-content: space-between;
     }
 
-    #nav-hamburguer{
+    #nav-hamburguer {
         display: block;
     }
 
-    #navbar.active{
+    #navbar.active {
         width: 250px;
         right: 0;
         opacity: 1;
     }
 
-   .fundo.active{
-       width: 100%;
-       height: 100%;
-       position: fixed;
-       background-color: rgba(0, 0, 0,0.8);
-       z-index: 0;
-       transition: 0.8s;
- 
-   }
-    #navbar{
+    .fundo.active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 0;
+        transition: 0.8s;
+
+    }
+
+    #navbar {
         flex-direction: column;
         justify-content: flex-start;
         position: fixed;
@@ -185,29 +195,28 @@ li{
         row-gap: 10px;
         background-color: var(--white);
         z-index: 99999;
-       transition: 0.8s;
-        
+        transition: 0.8s;
     }
 
-    #content-list{
+    #content-list {
         flex-direction: column;
         padding: 0 30px;
         row-gap: 30px;
         margin-top: 20px;
     }
 
-    #buttons{
+    #buttons {
         flex-direction: column;
         row-gap: 20px;
         padding: 20px;
         align-items: center;
     }
 
-    #buttons button:last-child{
+    #buttons button:last-child {
         width: max-content;
     }
 
-    .dropdown{
+    .dropdown {
         position: relative;
         background: none;
         box-shadow: none;
@@ -215,12 +224,12 @@ li{
         top: 0;
     }
 
-    .item-list{
+    .item-list {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    #close{
+    #close {
         display: flex;
         padding: 20px;
         justify-content: flex-end;
@@ -228,3 +237,127 @@ li{
 
 }
 
+#main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 70px 0;
+    column-gap: 100px;
+    flex-direction: row-reverse;
+
+}
+
+#content-img {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-text {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+#text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#text h1 {
+    font-size: 4.9em;
+    color: var(--black);
+    margin-bottom: 60px;
+}
+
+#text p {
+    font-size: 1.3em;
+    margin-bottom: 60px;
+    font-weight: 500;
+    line-height: 30px;
+    width: 90%;
+}
+
+#text button {
+    padding: 20px 25px;
+    color: var(--white);
+    border-radius: 15px;
+    background-color: #111;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    width: max-content;
+    border: 1px solid var(--black);
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+#text button:hover{
+    background-color: var(--white);
+    color: var(--black);
+    transition: 0.5s;
+}
+
+#content-img img {
+    width: 100%;
+}
+
+#content-sponsor {
+    display: flex;
+    column-gap: 60px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+#content-sponsor svg{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:980px) {
+    #main {
+        row-gap: 50px;
+    }
+
+    #content-img {
+        flex-basis: 100%;
+    }
+
+    #content-text {
+        flex-basis: 100%;
+        padding: 0 40px;
+    }
+
+    #text {
+        align-items: center;
+    }
+
+    #text h1 {
+        font-size: 1.7em;
+    }
+
+    #text p {
+        width: 100%;
+        font-size: 1.5em;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #content-sponsor {
+        column-gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:512px) {
+    #text p {
+        font-size: 1em;
+    }
+}
